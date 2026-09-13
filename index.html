@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>林凤婷 | 城乡规划 × 运营/产品</title>
+  <meta name="description" content="林凤婷的个人网站：福州大学城乡规划本科，寻找运营/产品方向实习机会。">
+
+  <!-- 字体：Space Grotesk（标题/正文）+ Space Mono（等宽）+ Caveat（手写点缀） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+  <!-- 图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+  <!-- ======================== 加载屏 ======================== -->
+  <div class="loader-overlay" id="loader">
+    <div class="loader-shapes">
+      <div class="loader-shape-svg loader-shape-1">
+        <svg width="70" height="70" viewBox="0 0 70 70"><rect x="5" y="5" width="60" height="60" fill="#66d9ef" stroke="#000" stroke-width="4"/></svg>
+      </div>
+      <div class="loader-shape-svg loader-shape-2">
+        <svg width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#ff6b9d" stroke="#000" stroke-width="4"/></svg>
+      </div>
+      <div class="loader-shape-svg loader-shape-3">
+        <svg width="60" height="60" viewBox="0 0 60 60"><polygon points="30,5 55,50 5,50" fill="#a8e6cf" stroke="#000" stroke-width="4"/></svg>
+      </div>
+    </div>
+    <div class="loader-wrapper">
+      <div class="loader-letter">H</div>
+      <div class="loader-letter">i</div>
+    </div>
+    <div class="loader-progress-bar">
+      <div class="loader-progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- ======================== 顶部滚动进度条 ======================== -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progress-fill"></div>
+    <div class="progress-checkpoints" id="progress-checkpoints">
+      <div class="checkpoint" data-target="hero" title="首页"><div class="checkpoint-dot"></div></div>
+      <div class="checkpoint" data-target="about" title="关于"><div class="checkpoint-dot"></div></div>
+      <div class="checkpoint" data-target="hobbies" title="爱好"><div class="checkpoint-dot"></div></div>
+      <div class="checkpoint" data-target="skills" title="技能"><div class="checkpoint-dot"></div></div>
+      <div class="checkpoint" data-target="projects" title="项目"><div class="checkpoint-dot"></div></div>
+      <div class="checkpoint" data-target="education" title="教育"><div class="checkpoint-dot"></div></div>
+      <div class="checkpoint" data-target="contact" title="联系"><div class="checkpoint-dot"></div></div>
+    </div>
+  </div>
+
+  <!-- ======================== 主画布 ======================== -->
+  <div class="page-wrapper">
+
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-content">
+        <a href="#hero" class="nav-brand">LFT</a>
+        <div class="nav-right">
+          <a href="#about" class="nav-link">关于</a>
+          <a href="#hobbies" class="nav-link">爱好</a>
+          <a href="#skills" class="nav-link">技能</a>
+          <a href="#projects" class="nav-link">项目</a>
+          <a href="#contact" class="nav-cta"><i class="fas fa-envelope"></i> 联系我</a>
+          <button class="theme-toggle-nav" id="theme-toggle" aria-label="切换明暗主题">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======================== Hero ======================== -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-left">
+          <h2 class="hero-greeting" id="hero-greeting">&nbsp;</h2>
+          <h1 class="hero-name">我是林凤婷</h1>
+          <p class="hero-description">
+            福州大学城乡规划专业本科生，具备系统的调研方法论与量化分析能力。
+            我相信“调研诊断 → 量化分析 → 方案落地”的方法论，可以解决商业世界里的真实问题。
+            目前正在寻找运营 / 产品方向的实习机会。
+          </p>
+          <div class="hero-social">
+            <button type="button" class="social-btn wechat-trigger" aria-label="打开微信二维码"><img src="assets/icon-wechat-small.png" alt="微信"></button>
+            <a href="mailto:2380826533@qq.com" class="social-btn" aria-label="发送邮件"><img src="assets/icon-email-small.png" alt="邮箱"></a>
+          </div>
+          <div class="hero-cta-container">
+            <a href="#projects" class="btn-cta"><i class="fas fa-folder-open"></i> 查看作品</a>
+            <a href="#contact" class="btn-cta btn-secondary"><i class="fas fa-paper-plane"></i> 联系我</a>
+            <span class="handwritten-note">← 点这里看看</span>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-image-wrapper">
+            <div class="deco-code">
+              <svg width="80" height="80" viewBox="0 0 80 80"><rect x="4" y="4" width="72" height="72" fill="#ffd93d" stroke="#000" stroke-width="5"/><text x="40" y="50" text-anchor="middle" font-family="Space Mono, monospace" font-size="28" font-weight="700" fill="#000">&lt;/&gt;</text></svg>
+            </div>
+            <div class="deco-terminal" id="deco-terminal">
+              <svg width="90" height="80" viewBox="0 0 90 80"><rect x="4" y="4" width="82" height="60" rx="6" fill="#ffffff" stroke="#000" stroke-width="5"/><rect x="4" y="64" width="82" height="12" rx="3" fill="#66d9ef" stroke="#000" stroke-width="4"/><text x="16" y="34" font-family="Space Mono, monospace" font-size="20" font-weight="700" fill="#000">&gt;_</text></svg>
+            </div>
+            <div class="deco-floppy">
+              <svg width="70" height="70" viewBox="0 0 70 70"><rect x="6" y="6" width="58" height="58" fill="#ff6b9d" stroke="#000" stroke-width="5"/><rect x="22" y="10" width="26" height="20" fill="#ffffff" stroke="#000" stroke-width="4"/><rect x="14" y="40" width="42" height="20" fill="#ffffff" stroke="#000" stroke-width="4"/></svg>
+            </div>
+
+            <div class="hero-photo" id="hero-photo">
+              <div class="tape-sticker"></div>
+              <img src="assets/photo-me.jpg" alt="林凤婷" class="hero-photo-img" loading="eager">
+            </div>
+
+            <div class="deco-label">城乡规划 × 运营/产品</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero 下方：技能/关键词徽章带 -->
+      <div class="tech-badges">
+        <div class="tech-badge"><i class="fas fa-search"></i> 用户调研</div>
+        <div class="tech-badge"><i class="fas fa-chart-bar"></i> 数据分析</div>
+        <div class="tech-badge"><i class="fas fa-bullseye"></i> 项目管理</div>
+        <div class="tech-badge"><i class="fas fa-shopping-cart"></i> 平台运营</div>
+        <div class="tech-badge"><i class="fas fa-puzzle-piece"></i> 问题闭环</div>
+      </div>
+
+      <p class="hero-scroll-hint"><i class="fas fa-hand-point-up"></i> 往下滑，看看我做过什么</p>
+    </section>
+
+    <!-- ======================== 纸撕裂分隔（视差收拢） ======================== -->
+    <div class="paper-tear paper-tear-top">
+      <svg preserveAspectRatio="none" viewBox="0 0 1200 60">
+        <path fill="#d0d0d0" d="M0,60 L0,38 40,30 80,42 130,26 190,40 240,22 300,38 350,28 410,44 470,24 520,36 580,20 640,38 700,28 760,42 820,24 880,36 940,26 1000,40 1060,24 1120,36 1160,30 1200,40 1200,60 Z"/>
+        <path fill="#ffffff" d="M0,60 L0,48 40,42 80,50 130,38 190,48 240,34 300,48 350,40 410,52 470,36 520,46 580,32 640,48 700,40 760,50 820,36 880,46 940,38 1000,48 1060,36 1120,46 1160,40 1200,48 1200,60 Z"/>
+      </svg>
+    </div>
+    <div class="page-gap" id="page-gap"></div>
+    <div class="paper-tear paper-tear-bottom" id="paper-tear-bottom">
+      <svg preserveAspectRatio="none" viewBox="0 0 1200 60">
+        <path fill="#ffffff" d="M0,0 L0,14 40,20 80,10 130,22 190,12 240,26 300,12 350,22 410,8 470,24 520,14 580,28 640,12 700,22 760,10 820,24 880,14 940,22 1000,12 1060,24 1120,14 1160,20 1200,12 1200,0 Z"/>
+        <path fill="#d0d0d0" d="M0,0 L0,4 40,8 80,2 130,10 190,4 240,12 300,4 350,10 410,2 470,12 520,6 580,14 640,6 700,10 760,4 820,12 880,6 940,10 1000,4 1060,12 1120,6 1160,8 1200,4 1200,0 Z"/>
+      </svg>
+    </div>
+    <div class="tear-tape-sticker" id="tear-tape-sticker">继续往下看 ✦</div>
+
+    <!-- ======================== About ======================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About · 关于</h2>
+        <div class="card">
+          <p class="text">
+            我是一名城乡规划专业的本科生，就读于福州大学（211），将于 2027 年 6 月毕业。
+            在专业训练中，我系统掌握了
+            <span class="highlight highlight-yellow">调研框架搭建、量化数据分析、问题-需求-方案闭环</span>
+            的核心方法。2026 年暑期，我在一家跨境电商公司完成了为期 3 个月的亚马逊运营实习，
+            将这套方法论成功迁移到电商运营场景中——从 Listing 维护、广告执行到客诉处理，
+            用数据和同理心解决真实业务问题。
+          </p>
+          <p class="text">
+            我擅长在复杂信息中快速定位核心问题，用
+            <span class="highlight highlight-cyan">结构化思维</span>
+            拆解任务，再用
+            <span class="highlight highlight-pink">量化手段</span>
+            验证假设、推动落地。无论是 200 份问卷的学术调研，还是数十条 ASIN 的批量维护，
+            我都坚持“目标清晰、过程可控、结果可衡量”的工作方式。我相信数据不会说谎，用户的声音值得被认真倾听。
+          </p>
+          <p class="text">
+            <span class="highlight highlight-yellow">用规划思维拆解复杂问题，用数据本能驱动业务增长。</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== Hobbies · 爱好手帐（可翻页日记本） ======================== -->
+    <section class="section hobbies-section" id="hobbies">
+      <div class="container">
+        <div class="hobbies-title-wrap">
+          <h2 class="section-title">Hobby Diary · 爱好手帐</h2>
+          <span class="hobby-title-sticker" aria-hidden="true"></span>
+        </div>
+        <p class="hobbies-lead">✎ 这是我的手帐本 —— 翻一翻，看看工作之外的我。</p>
+
+        <!-- 手帐本：滚轮 / 左右拖拽 / 按钮均可翻页；点击照片可放大 -->
+        <div class="diary-scene" id="diary-scene">
+          <div class="diary-float-deco deco-star" aria-hidden="true"></div>
+          <div class="diary-float-deco deco-smile" aria-hidden="true"></div>
+          <div class="diary-float-deco deco-icon" aria-hidden="true"></div>
+          <div class="diary-float-deco deco-window" aria-hidden="true"></div>
+          <div class="diary-book" id="diary-book">
+
+            <!-- Page 1 · 城市漫步 -->
+            <div class="diary-page" data-hobby="0" data-accent="cyan">
+              <div class="diary-face diary-face-front">
+                <div class="diary-page-inner">
+                  <span class="page-corner-deco corner-tl" aria-hidden="true"></span>
+                  <span class="page-corner-deco corner-br" aria-hidden="true"></span>
+                  <div class="diary-left">
+                    <button class="polaroid" type="button" data-hobby="0">
+                      <span class="washi washi-a"></span>
+                      <span class="washi washi-b"></span>
+                      <img src="assets/hobby-walk.jpg" alt="城市漫步" class="polaroid-photo">
+                      <div class="polaroid-caption">城市夜景</div>
+                    </button>
+                    <div class="diary-margin-note">点击照片可以放大看 ✜</div>
+                  </div>
+                  <div class="diary-right">
+                    <div class="diary-page-no">NO.01</div>
+                    <h3 class="diary-title">城市漫步</h3>
+                    <div class="sticky-note">
+                      喜欢不带目的地穿行在城市街巷，观察街道尺度、公共空间和人流动线，把课堂上学到的规划理论拿来做“实地验证”。
+                    </div>
+                    <div class="hobby-tags">
+                      <span class="hobby-tag">街头观察</span>
+                      <span class="hobby-tag">空间摄影</span>
+                      <span class="hobby-tag">CITY WALK</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="diary-face diary-face-back"><i class="fas fa-book-open"></i></div>
+            </div>
+
+            <!-- Page 2 · 追星 -->
+            <div class="diary-page" data-hobby="1" data-accent="pink">
+              <div class="diary-face diary-face-front">
+                <div class="diary-page-inner">
+                  <span class="page-corner-deco corner-tl" aria-hidden="true"></span>
+                  <span class="page-corner-deco corner-br" aria-hidden="true"></span>
+                  <div class="diary-left">
+                    <button class="polaroid" type="button" data-hobby="1">
+                      <span class="washi washi-a"></span>
+                      <span class="washi washi-b"></span>
+                      <img src="assets/hobby-idol.jpg" alt="追星" class="polaroid-photo">
+                      <div class="polaroid-caption">my shining star ✦</div>
+                    </button>
+                    <div class="diary-margin-note">点击照片可以放大看 ✜</div>
+                  </div>
+                  <div class="diary-right">
+                    <div class="diary-page-no">NO.02</div>
+                    <h3 class="diary-title">追星</h3>
+                    <div class="sticky-note">
+                      关注偶像团体动态、演唱会现场与粉丝社群运营，对饭圈经济、应援文化和内容传播有自己的观察。
+                    </div>
+                    <div class="hobby-tags">
+                      <span class="hobby-tag">现场演出</span>
+                      <span class="hobby-tag">饭圈经济</span>
+                      <span class="hobby-tag">内容传播</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="diary-face diary-face-back"><i class="fas fa-book-open"></i></div>
+            </div>
+
+            <!-- Page 3 · 探店 -->
+            <div class="diary-page" data-hobby="2" data-accent="yellow">
+              <div class="diary-face diary-face-front">
+                <div class="diary-page-inner">
+                  <span class="page-corner-deco corner-tl" aria-hidden="true"></span>
+                  <span class="page-corner-deco corner-br" aria-hidden="true"></span>
+                  <div class="diary-left">
+                    <button class="polaroid" type="button" data-hobby="2">
+                      <span class="washi washi-a"></span>
+                      <span class="washi washi-b"></span>
+                      <img src="assets/hobby-cafe.jpg" alt="探店" class="polaroid-photo">
+                      <div class="polaroid-caption">hidden gem ☕</div>
+                    </button>
+                    <div class="diary-margin-note">点击照片可以放大看 ✜</div>
+                  </div>
+                  <div class="diary-right">
+                    <div class="diary-page-no">NO.03</div>
+                    <h3 class="diary-title">探店</h3>
+                    <div class="sticky-note">
+                      热衷于发现城市里的独立小店，从空间氛围、产品陈列到服务细节都会留意，经常给朋友安利宝藏店铺。
+                    </div>
+                    <div class="hobby-tags">
+                      <span class="hobby-tag">独立小店</span>
+                      <span class="hobby-tag">空间氛围</span>
+                      <span class="hobby-tag">产品观察</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="diary-face diary-face-back"><i class="fas fa-book-open"></i></div>
+            </div>
+
+            <!-- Page 4 · 旅行 -->
+            <div class="diary-page" data-hobby="3" data-accent="mint">
+              <div class="diary-face diary-face-front">
+                <div class="diary-page-inner">
+                  <span class="page-corner-deco corner-tl" aria-hidden="true"></span>
+                  <span class="page-corner-deco corner-br" aria-hidden="true"></span>
+                  <div class="diary-left">
+                    <button class="polaroid" type="button" data-hobby="3">
+                      <span class="washi washi-a"></span>
+                      <span class="washi washi-b"></span>
+                      <img src="assets/hobby-travel.jpg" alt="旅行" class="polaroid-photo">
+                      <div class="polaroid-caption">plan & go !</div>
+                    </button>
+                    <div class="diary-margin-note">点击照片可以放大看 ✜</div>
+                  </div>
+                  <div class="diary-right">
+                    <div class="diary-page-no">NO.04</div>
+                    <h3 class="diary-title">旅行</h3>
+                    <div class="sticky-note">
+                      享受做旅行攻略的过程，路线、预算、风险预案一个不落；也在旅途中收集不同城市的街道灵感。
+                    </div>
+                    <div class="hobby-tags">
+                      <span class="hobby-tag">行程规划</span>
+                      <span class="hobby-tag">城市观察</span>
+                      <span class="hobby-tag">预算管理</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="diary-face diary-face-back"><i class="fas fa-book-open"></i></div>
+            </div>
+
+            <!-- Page 5 · 阅读 -->
+            <div class="diary-page" data-hobby="4" data-accent="purple">
+              <div class="diary-face diary-face-front">
+                <div class="diary-page-inner">
+                  <span class="page-corner-deco corner-tl" aria-hidden="true"></span>
+                  <span class="page-corner-deco corner-br" aria-hidden="true"></span>
+                  <div class="diary-left">
+                    <button class="polaroid" type="button" data-hobby="4">
+                      <span class="washi washi-a"></span>
+                      <span class="washi washi-b"></span>
+                      <img src="assets/hobby-reading.jpg" alt="阅读" class="polaroid-photo">
+                      <div class="polaroid-caption">read & note ✎</div>
+                    </button>
+                    <div class="diary-margin-note">点击照片可以放大看 ✜</div>
+                  </div>
+                  <div class="diary-right">
+                    <div class="diary-page-no">NO.05</div>
+                    <h3 class="diary-title">阅读</h3>
+                    <div class="sticky-note">
+                      通勤和睡前都会读书，偏爱社会学、城市研究与产品思维类书籍，习惯把启发随手记进 Notion。
+                    </div>
+                    <div class="hobby-tags">
+                      <span class="hobby-tag">社会学</span>
+                      <span class="hobby-tag">城市研究</span>
+                      <span class="hobby-tag">产品思维</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="diary-face diary-face-back"><i class="fas fa-book-open"></i></div>
+            </div>
+
+          </div>
+
+          <!-- 本体下方的"呼吸"投影（还原参考站 moamoa 阴影律动） -->
+          <div class="diary-shadow"></div>
+
+          <!-- 像素风边角贴纸装饰 -->
+          <div class="pixel-sticker pixel-sticker-tl" aria-hidden="true"></div>
+          <div class="pixel-sticker pixel-sticker-tr" aria-hidden="true"></div>
+          <div class="pixel-sticker pixel-sticker-bl" aria-hidden="true"></div>
+        </div>
+
+        <!-- 翻页控制 -->
+        <div class="diary-nav">
+          <button class="diary-btn" id="diary-prev" type="button"><i class="fas fa-chevron-left"></i> 上一页</button>
+          <div class="diary-pager" id="diary-pager"><b>01</b> / 05</div>
+          <button class="diary-btn" id="diary-next" type="button">下一页 <i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="diary-hint"><i class="fas fa-hand-pointer diary-hand"></i> 在书本上滚动滚轮，或按住左右拖拽，也能翻页</div>
+      </div>
+    </section>
+
+    <!-- 微信二维码弹窗（点击微信图标/卡片打开） -->
+    <div class="wechat-popup" id="wechat-popup" aria-hidden="true">
+      <div class="wechat-popup-back" id="wechat-popup-back"></div>
+      <div class="wechat-popup-content">
+        <div class="wechat-popup-qr">
+          <img src="assets/wechat-qr.jpg" alt="微信二维码" loading="lazy">
+        </div>
+        <p class="wechat-popup-hint">扫一扫，添加我为朋友</p>
+        <button type="button" class="wechat-popup-close" id="wechat-popup-close"><i class="fas fa-xmark"></i> 关闭</button>
+      </div>
+    </div>
+
+    <!-- 手帐照片放大弹窗（点击宝丽来照片打开） -->
+    <div class="diary-popup" id="diary-popup" aria-hidden="true">
+      <div class="diary-popup-offset">
+        <div class="diary-popup-back" id="diary-popup-back"></div>
+        <div class="diary-popup-content" id="diary-popup-content">
+          <div class="diary-popup-photo" id="diary-popup-photo">
+            <img src="" alt="" id="diary-popup-img" class="diary-popup-img">
+          </div>
+          <h3 class="diary-popup-title" id="diary-popup-title"></h3>
+          <p class="diary-popup-desc" id="diary-popup-desc"></p>
+          <div class="diary-popup-tags hobby-tags" id="diary-popup-tags"></div>
+          <p class="diary-popup-note"><i class="fas fa-thumbtack"></i> 此处适合放一张高清实拍照片 / 作品截图，配一句手写小注。</p>
+        </div>
+        <div class="diary-popup-close">
+          <button type="button" id="diary-popup-close"><i class="fas fa-xmark"></i> CLOSE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== Skills ======================== -->
+    <section class="section" id="skills" style="position:relative">
+      <div class="section-sticker">← 我的工具箱 ✎</div>
+      <div class="container">
+        <h2 class="section-title">Skills · 技能</h2>
+        <p class="skills-lead">🛠️ 我的工具箱 —— 每一项都曾在真实场景中落地过。</p>
+        <div class="skills-grid-modern">
+
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <i class="fas fa-chart-bar skill-icon-large"></i>
+              <h3 class="skill-box-title">数据分析</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fab fa-python"></i> Python</span>
+              <span class="tag"><i class="fas fa-table"></i> Excel 交叉分析</span>
+              <span class="tag"><i class="fas fa-chart-pie"></i> 数据可视化</span>
+              <span class="tag"><i class="fas fa-poll"></i> 问卷统计分析</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <i class="fas fa-shopping-cart skill-icon-large"></i>
+              <h3 class="skill-box-title">平台运营</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fas fa-amazon"></i> 亚马逊 Seller Central</span>
+              <span class="tag"><i class="fas fa-music"></i> TikTok Shop</span>
+              <span class="tag"><i class="fas fa-headset"></i> 多平台客诉处理</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <i class="fas fa-search skill-icon-large"></i>
+              <h3 class="skill-box-title">调研方法</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fas fa-comments"></i> 深度访谈</span>
+              <span class="tag"><i class="fas fa-map"></i> 用户旅程地图</span>
+              <span class="tag"><i class="fas fa-sitemap"></i> 调研框架设计</span>
+              <span class="tag"><i class="fas fa-clipboard-list"></i> 问卷设计</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <i class="fas fa-comments skill-icon-large"></i>
+              <h3 class="skill-box-title">客户沟通</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fas fa-headset"></i> 客诉处理</span>
+              <span class="tag"><i class="fas fa-star-half-alt"></i> 合规差评治理</span>
+              <span class="tag"><i class="fas fa-clock"></i> 多平台时效管控</span>
+              <span class="tag"><i class="fas fa-heart"></i> 共情表达</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <i class="fas fa-bullseye skill-icon-large"></i>
+              <h3 class="skill-box-title">项目管理</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fas fa-people-arrows"></i> 跨部门协调</span>
+              <span class="tag"><i class="fas fa-project-diagram"></i> 全流程统筹</span>
+              <span class="tag"><i class="fas fa-sort-amount-down"></i> 优先级管理</span>
+              <span class="tag"><i class="fas fa-check-circle"></i> 任务闭环</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <i class="fas fa-boxes skill-icon-large"></i>
+              <h3 class="skill-box-title">库存与广告</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fas fa-percentage"></i> ACoS 监控</span>
+              <span class="tag"><i class="fas fa-chart-line"></i> 广告数据复盘</span>
+              <span class="tag"><i class="fas fa-clipboard-check"></i> 库存 SOP</span>
+              <span class="tag"><i class="fas fa-arrow-trend-up"></i> 销量趋势分析</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-header">
+              <i class="fas fa-toolbox skill-icon-large"></i>
+              <h3 class="skill-box-title">通用工具</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fas fa-file-word"></i> Office 三件套</span>
+              <span class="tag"><i class="fas fa-sticky-note"></i> Notion</span>
+              <span class="tag"><i class="fas fa-palette"></i> Canva</span>
+              <span class="tag"><i class="fas fa-file-alt"></i> 腾讯文档</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== Projects ======================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects · 项目</h2>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-logo">A</div>
+            <h3 class="project-title">听障群体城市公共空间包容性社会调查</h3>
+            <p class="project-tagline">
+              针对听障人士出行沟通障碍缺乏量化支撑的问题，通过 200 份问卷 + 10 份深度访谈，
+              定位核心痛点，输出三大维度优化策略，获课程最高分。
+            </p>
+            <div class="tech-tags project-tech-tags">
+              <span class="tag project-tag">用户调研</span>
+              <span class="tag project-tag">深度访谈</span>
+              <span class="tag project-tag">交叉分析</span>
+              <span class="tag project-tag">用户旅程地图</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-logo">B</div>
+            <h3 class="project-title">个人投资日志 · Vibe Coding</h3>
+            <p class="project-tagline">
+              用自然语言驱动 AI 工具（Cursor）快速搭建个人投资记录与复盘网页，
+              实现资产动态看板、交易记录管理、收益可视化分析，让投资决策有据可查。
+            </p>
+            <div class="tech-tags project-tech-tags">
+              <span class="tag project-tag">Next.js</span>
+              <span class="tag project-tag">Tailwind</span>
+              <span class="tag project-tag">Chart.js</span>
+              <span class="tag project-tag">AI 辅助开发</span>
+              <span class="tag project-tag">Vercel 部署</span>
+            </div>
+            <div class="project-links">
+              <a href="https://mialin666.github.io/investment-diary-V2/investment-diary.html" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> 访问链接</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-logo">C</div>
+            <h3 class="project-title">Vibe Coding 个人作品网页</h3>
+            <p class="project-tagline">
+              将个人简历升级为沉浸式交互网页，用“规划思维”组织信息架构，
+              实现经历、技能、项目的模块化展示，支持移动端自适应。
+            </p>
+            <div class="tech-tags project-tech-tags">
+              <span class="tag project-tag">HTML/CSS</span>
+              <span class="tag project-tag">响应式设计</span>
+              <span class="tag project-tag">毛玻璃效果</span>
+              <span class="tag project-tag">折叠卡片交互</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== Education · 教育 ======================== -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title">Education · 教育</h2>
+        <div class="education-single-card">
+          <div class="card education-card-wide">
+            <div class="education-header"><i class="fas fa-graduation-cap"></i> 教育背景</div>
+            <div class="education-degree">城乡规划 本科</div>
+            <div class="education-school"><i class="fas fa-university"></i> 福州大学（211）</div>
+            <div class="education-meta">
+              <span class="badge"><i class="fas fa-calendar"></i> 2022.09 - 2027.06</span>
+              <span class="badge"><i class="fas fa-map-marker-alt"></i> 福建福州</span>
+            </div>
+            <p class="education-note">
+              主修方向：城市社会学、城市经济学、居住区规划、控规与城市设计。
+              辅修技能：Python 数据分析、调研框架搭建。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== Contact ======================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-container-compact">
+          <h2 class="section-title" style="display:block;text-align:center">Get in Touch · 联系我</h2>
+          <p class="contact-intro">
+            如果你对我的经历感兴趣，或者想聊聊运营 / 产品方向的实习机会，欢迎随时找我。
+          </p>
+          <div class="contact-grid contact-grid-duo">
+
+            <button class="contact-card contact-reveal" data-contact="wechat" data-value="LFT_WeChat_ID" aria-label="点击获取微信二维码">
+              <div class="contact-icon"><img src="assets/icon-wechat.png" alt="微信"></div>
+              <div class="contact-label">微信</div>
+              <div class="contact-value contact-mask">点击获取微信二维码</div>
+            </button>
+
+            <a href="mailto:2380826533@qq.com" class="contact-card" aria-label="发送邮件">
+              <div class="contact-icon"><img src="assets/icon-email.png" alt="邮箱"></div>
+              <div class="contact-label">邮箱</div>
+              <div class="contact-value">2380826533@qq.com</div>
+            </a>
+
+          </div>
+
+          <div class="contact-social">
+            <button type="button" class="social-icon contact-reveal" data-contact="wechat" data-value="LFT_WeChat_ID" aria-label="点击获取微信二维码"><img src="assets/icon-wechat-small.png" alt="微信"></button>
+            <a href="mailto:2380826533@qq.com" class="social-icon" aria-label="发送邮件"><img src="assets/icon-email-small.png" alt="邮箱"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== Footer ======================== -->
+    <footer>
+      <div class="footer-compact">
+        <span class="footer-brand-compact">LFT</span>
+        <div class="footer-nav-compact">
+          <a href="#hero">首页</a>
+          <a href="#about">关于</a>
+          <a href="#hobbies">爱好</a>
+          <a href="#skills">技能</a>
+          <a href="#projects">项目</a>
+          <a href="#education">教育</a>
+          <a href="#contact">联系</a>
+        </div>
+        <div class="footer-social-compact">
+          <button type="button" class="social-btn wechat-trigger" aria-label="打开微信二维码"><img src="assets/icon-wechat-small.png" alt="微信"></button>
+          <a href="mailto:2380826533@qq.com" class="social-btn" aria-label="发送邮件"><img src="assets/icon-email-small.png" alt="邮箱"></a>
+        </div>
+      </div>
+      <div class="footer-bottom-compact">
+        © 2026 林凤婷 · 城乡规划 × 运营/产品 · Based on a Neo-Brutalist layout
+      </div>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <script src="main.js"></script>
+</body>
+</html>
